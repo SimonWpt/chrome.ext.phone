@@ -3,7 +3,7 @@ function getNumber(info, tab) {
         favoriteHandler: 'phone://',
     }, function (items) {
         chrome.tabs.create({
-            url: items.favoriteHandler + info.selectionText
+            url: items.favoriteHandler + info.selectionText.trim()
         })
     });
 }
